@@ -93,7 +93,7 @@
             flex-shrink: 0;
             display: flex;
             gap: 60px;
-            align-items: flex-start; 
+            align-items: stretch; /* Stretch content block to match height of the image */
             text-align: left;
             padding: 10px;
         }
@@ -140,7 +140,9 @@
 
         .article-content {
             flex: 1;
-            padding-top: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center align text components vertically within the image height block */
         }
 
         .article-link-wrapper {
@@ -188,38 +190,11 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 0.95rem;
-            margin-bottom: 30px;
             transition: color 0.2s ease;
         }
 
         .slider-read-more:hover {
             color: #64b46c;
-        }
-
-        /* Author Metadata Block */
-        .author-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .author-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .author-name {
-            color: #0c2312;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .read-time {
-            color: #718096;
-            font-size: 0.85rem;
-            margin-top: 2px;
         }
 
         /* Slider Navigation Dots Controls */
@@ -464,6 +439,7 @@
             .main-article.image-left, .main-article.image-right {
                 flex-direction: column;
                 gap: 30px;
+                align-items: flex-start;
             }
             .article-img-wrapper {
                 min-width: 100%;
@@ -507,7 +483,7 @@
                     <div class="article-content">
                         <a href="https://www.nature.com/articles/ncomms10434" target="_blank" class="article-link-wrapper">
                             <span class="article-date">OCT 24, 2026</span>
-                            <h3>The Science of Soil Conditioning</h3>
+                            <h3>The Comprehensive Science of Soil Conditioning</h3>
                         </a>
                         <p>
                             Maximizing plant vitality starts beneath the surface. Discover how introducing tailored bio-matter to rebalance nutrient distribution vectors is not only reducing maintenance cycles but significantly improving root oxygenation and efficiency.
@@ -515,13 +491,6 @@
                         <a href="https://www.nature.com/articles/ncomms10434" target="_blank" class="slider-read-more">
                             Read More &rarr;
                         </a>
-                        <div class="author-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Editorial Team" class="author-avatar">
-                            <div>
-                                <div class="author-name">Editorial Team</div>
-                                <div class="read-time">5 min read</div>
-                            </div>
-                        </div>
                     </div>
                 </article>
 
@@ -541,13 +510,6 @@
                         <a href="https://soa.utexas.edu/sites/default/files/documents/belaire-et-al.-2023.pdf" target="_blank" class="slider-read-more">
                             Read More &rarr;
                         </a>
-                        <div class="author-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Architecture Dept" class="author-avatar">
-                            <div>
-                                <div class="author-name">Architecture Dept</div>
-                                <div class="read-time">6 min read</div>
-                            </div>
-                        </div>
                     </div>
                 </article>
 
@@ -650,7 +612,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 VBR Inspired Landscapes. All Rights Reserved</p>
+        <p>&copy; 2026 VBR Inspired Landscapes. All Rights Reserved. Prepared for Full-Stack Training Hub.</p>
     </footer>
 
     <script>
