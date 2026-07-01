@@ -1,4 +1,4 @@
-# 📚 משימות בית: פיתוח Full Stack - HTML 
+# 📚 משימות בית: Full Stack - HTML 
 
 ## 01 - HTML - Sports Website
 ### 🎯 מטרה
